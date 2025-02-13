@@ -1,0 +1,6 @@
+
+#root,
+html,
+body {
+  @apply grid h-full;
+}

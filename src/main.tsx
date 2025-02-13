@@ -2,7 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from "firebase/analytics";
-import './index.css'
+import { store } from './store';
+import { Provider } from 'react-redux'
 import App from './App.tsx'
 
 const firebaseConfig = {
@@ -20,6 +21,9 @@ const analytics = getAnalytics(app);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
+
   </StrictMode>,
 )
