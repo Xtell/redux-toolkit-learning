@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+}
+
+.sidebar {
+  display: grid;
+  width: var(--sidebarWidth);
+  flex: 0 0 var(--sidebarWidth);
+}
+
+.content {
+  flex: 1;
+}

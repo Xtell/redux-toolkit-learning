@@ -1,18 +1,22 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { AllTasks } from "@/components/AllTasks"
+import { Sidebar } from "@/components/Sidebar"
+import { Wrapper } from "@/components/Wrapper/Wrapper"
 
 export const MainPage = () => {
+
+  const sidebar = <>
+    <Sidebar>
+      <AllTasks />
+    </Sidebar>
+  </>
+
+
+
   return (
-    <div className="pt-10">
-      <h1 className="text-center mb-10">TODO LIST</h1>
-      <header>
-        <div>
-          <div className="flex align-center justify-center">
-            <Input className="max-w-2xs mr-5" type="text" placeholder="Add todo" />
-            <Button> Add </Button>
-          </div>
-        </div>
-      </header>
+    <div>
+      <Wrapper sidebar={sidebar}>
+        <h1>Main Page</h1>
+      </Wrapper>
     </div>
   )
 }
